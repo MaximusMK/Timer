@@ -2,69 +2,81 @@ body {
     margin: 0;
     padding: 0;
     min-width: 90%;
-    background-color: rgb(177, 177, 177);   
+    background-color: #222; 
+    color: #ddd;  
 }
-header, footer, .mainContainer {
+header,
+footer,
+.input-data,
+.timer {
     width: 900px;
     margin: 0 auto;
+    background-color: #ddd;
+
 }
 header {     
-    height: 60px;      
+    height: 60px;
     background-image: linear-gradient(
                         to top, #0029df 30px, #7e9ffb 60px);    
 }
 header h1 {
     text-align: center;
-    font-size: 40px;
-    color: #ddd;
-    margin-top: 0;        
+    font-size: 40px;   
+    margin-top: 0;    
 }
-.mainContainer {    
-    box-sizing: border-box;
-    height: 400px;
-    background-color: #ddd;       
-}
-.timerName { 
-    box-sizing: border-box;   
-    width: 450px;
-    height: 30px;
-    /* border: solid 2px blue; */
-    /* display: inline-block; */
-    float: left;
-}
-.timerName input {  
-    width: 350px;
-    font-size: 14px;    
-    color: #0029df; 
-    display: inline-block;  
-}
-.setTimer {
-    width: 450px;
-    float: left;
+input {     
+    width: 300px;
+    height: 40px;
+    border: 0;
+    font-size: 30px;  
+    padding: 10px;  
+    margin: 10px;
+    text-align: center;
+    color: #0029df;      
+    background-color: rgb(150, 203, 243);
 }
 button {
-    background-color: #b2ebc0;
-    width: 100px;
-    height: 50px;
-    /* float: left; */
-    border: solid 1px blue;
+    width: 110px;
+    height: 60px;
+    background-image: linear-gradient(
+                        to top, #0029df 30px, #7e9ffb 60px);   
+    border: solid 2px rgb(5, 46, 209);
+    border-radius: 10px;
+    color: #ddd; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 30px;
     display: inline-block;    
 }
-
-
-
-
+.title {
+    padding: 20px;
+    color: #0029df;
+    font-size: 24px;
+    text-align: center;    
+}
+.timer__block {
+    width: 25%;
+    height: 100px;
+    color: #0029df;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+    float: left;  
+    background-color: #eee;  
+}
 footer {
     box-sizing: border-box;
-    height: 20px;
-    padding-top: 0;
+    /* height: 30px; */
+    padding: 1px;
     padding-left: 40px;
-    color: rgb(0, 0, 0);
     background-image: linear-gradient(
                         to top, #7e9ffb 0px, #0029df 20px); 
+    clear: both;
 }
 footer a {
-    font-weight: bold;
-    color: rgb(17, 56, 185);
-    text-decoration: none;    
+    font-weight: bold;    
+    text-decoration: none;  
+    color: #eee;  
+    padding-left: 10px;
+
 }

@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const input = document.querySelector('.inputDate'),
+    const input = document.querySelector('.date'),
           btn = document.querySelector('button');        
    
           btn.addEventListener('click', () => {
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
               setClock('.timer', setDate);           
           })   
 
-    function getTimeRemaining(endTime) { //ввести отдельные ячейки для задания времени
+    function getTimeRemaining(endTime) {
         const t = Date.parse(endTime) - Date.parse(new Date()),
             days = Math.floor(t / (1000 * 60 * 60 * 24)),
             hours = Math.floor((t / (1000 * 60 * 60) % 24)),
@@ -55,6 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
+                alert('Таймер сработал!');
             }
         }
     }

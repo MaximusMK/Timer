@@ -1,0 +1,70 @@
+body {   
+    margin: 0;
+    padding: 0;
+    min-width: 90%;
+    background-color: rgb(177, 177, 177);   
+}
+header, footer, .mainContainer {
+    width: 900px;
+    margin: 0 auto;
+}
+header {     
+    height: 60px;      
+    background-image: linear-gradient(
+                        to top, #0029df 30px, #7e9ffb 60px);    
+}
+header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #ddd;
+    margin-top: 0;        
+}
+.mainContainer {    
+    box-sizing: border-box;
+    height: 400px;
+    background-color: #ddd;       
+}
+.timerName { 
+    box-sizing: border-box;   
+    width: 450px;
+    height: 30px;
+    /* border: solid 2px blue; */
+    /* display: inline-block; */
+    float: left;
+}
+.timerName input {  
+    width: 350px;
+    font-size: 14px;    
+    color: #0029df; 
+    display: inline-block;  
+}
+.setTimer {
+    width: 450px;
+    float: left;
+}
+button {
+    background-color: #b2ebc0;
+    width: 100px;
+    height: 50px;
+    /* float: left; */
+    border: solid 1px blue;
+    display: inline-block;    
+}
+
+
+
+
+footer {
+    box-sizing: border-box;
+    height: 20px;
+    padding-top: 0;
+    padding-left: 40px;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(
+                        to top, #7e9ffb 0px, #0029df 20px); 
+}
+footer a {
+    font-weight: bold;
+    color: rgb(17, 56, 185);
+    text-decoration: none;    
+}

@@ -6,13 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
           btn = document.querySelector('button');        
    
           btn.addEventListener('click', () => {
-              let setDate = input.value;              
-              console.log(setDate);                 
-              setClock('.timer', setDate);           
+              let inputDate = input.value;              
+              console.log(inputDate);                 
+              setTimer('.timer', inputDate);           
           })   
 
-    function getTimeRemaining(endTime) {
-        const t = Date.parse(endTime) - Date.parse(new Date()),
+    function getTime(inputDate) {
+        const t = Date.parse(inputDate) - Date.parse(new Date()),
             days = Math.floor(t / (1000 * 60 * 60 * 24)),
             hours = Math.floor((t / (1000 * 60 * 60) % 24)),
             minutes = Math.floor((t / (1000 * 60) % 60)),
@@ -35,19 +35,18 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function setClock(selector, endTime) {
+    function setTimer(selector, inputDate) {
         const timer = document.querySelector(selector),
             days = timer.querySelector('#days'),
             hours = timer.querySelector('#hours'),
             minutes = timer.querySelector('#minutes'),
             seconds = timer.querySelector('#seconds'),
-            timeInterval = setInterval(updateClock, 1000);
+            timeInterval = setInterval(updateTimer, 1000);
 
-        updateClock();
+        updateTimer();
 
-        function updateClock() {
-            const t = getTimeRemaining(endTime);
-
+        function updateTimer() {
+            const t = getTime(inputDate);
             days.innerHTML = getZero(t.days);
             hours.innerHTML = getZero(t.hours);
             minutes.innerHTML = getZero(t.minutes);

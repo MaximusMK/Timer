@@ -26,13 +26,13 @@ header h1 {
     margin-top: 0;    
 }
 .input-date {     
-    height: 100px;
+    height: 60px;
     color: #111;    
 }
 .input_ {
     margin: 5px;
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -43,17 +43,27 @@ span {
     font-size: 20px;
 }
 button {
-    width: 110px;
-    height: 60px;
+    width: 120px;
+    height: 70px;
     background-image: linear-gradient(
                         to top, #0029df 30px, #7e9ffb 60px);   
     border: solid 2px rgb(5, 46, 209);
     border-radius: 10px;
     color: #ddd; 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-left: 30px;
     display: inline-block;    
+}
+button:hover {
+    color: #111;
+    background-image: linear-gradient(
+                        to top, #798bdc 30px, #d9deee 60px);
+}
+button:visited {
+    color: rgb(231, 22, 22);
+    background-image: linear-gradient(
+                        to top, #798bdc 30px, #d9deee 60px);
 }
 .title {
     padding: 20px;
@@ -63,21 +73,20 @@ button {
 }
 .timer__block {
     width: 25%;
-    height: 250px;
+    height: 120px;
     color: #0029df;
     font-size:20px;
     text-align: center;
-    padding-top: 10px;
     float: left;  
     background-color: #eee;  
 }
 .timer__block p {
-    font-size:60px;
+    margin: 0;
+    font-size:80px;
 }
 
 footer {
     box-sizing: border-box;
-    /* height: 30px; */
     padding: 1px;
     padding-left: 40px;
     background-image: linear-gradient(

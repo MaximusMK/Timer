@@ -7,7 +7,8 @@ body {
 }
 header,
 footer,
-.input-data,
+.input-date,
+.input_,
 .timer {
     width: 900px;
     margin: 0 auto;
@@ -24,16 +25,22 @@ header h1 {
     font-size: 40px;   
     margin-top: 0;    
 }
-input {     
-    width: 350px;
+.input-date {     
+    height: 100px;
+    color: #111;    
+}
+.input_ {
+    margin: 5px;
+    width: 60px;
     height: 40px;
-    border: 0;
-    font-size: 30px;  
-    padding: 10px;  
-    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    color: #0029df;      
-    background-color: rgb(150, 203, 243);
+    
+    display: inline;
+}
+span {
+    font-size: 20px;
 }
 button {
     width: 110px;
@@ -56,14 +63,18 @@ button {
 }
 .timer__block {
     width: 25%;
-    height: 100px;
+    height: 250px;
     color: #0029df;
-    font-size: 40px;
+    font-size:20px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 10px;
     float: left;  
     background-color: #eee;  
 }
+.timer__block p {
+    font-size:60px;
+}
+
 footer {
     box-sizing: border-box;
     /* height: 30px; */

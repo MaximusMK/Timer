@@ -60,7 +60,7 @@ button:hover {
     background-image: linear-gradient(
                         to top, #798bdc 30px, #d9deee 60px);
 }
-button:visited {
+button: {
     color: rgb(231, 22, 22);
     background-image: linear-gradient(
                         to top, #798bdc 30px, #d9deee 60px);

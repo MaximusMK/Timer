@@ -2,28 +2,38 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const input = document.querySelector('.date'),
-        inputDay = document.querySelector('.days'),
+    const inputDay = document.querySelector('.days'),
         inputHours = document.querySelector('.hours'),
         inputMinutes = document.querySelector('.minutes'),
         inputSeconds = document.querySelector('.seconds'),
-        btn = document.querySelector('button');
+        btn = document.querySelector('button'),
+        btnStop = document.querySelector('button-stop'), //stop button
+        soundFinish = document.querySelector('.sound-finish');
 
     btn.addEventListener('click', () => {
-
-        let sum = inputDay.value * 24 * 60 * 60 * 1000 + inputHours.value * 60 * 60 * 1000 + inputMinutes.value * 60 * 1000 + inputSeconds.value * 1000;
+        let sum = GetSumInput();
         let inputDate = Date.parse(new Date()) + sum;
-        if(sum == NaN || sum < 1000) {
-            inputDate = Date.parse(new Date()) + 1000*60;
+        if (sum < 1000) {
+            inputDate = Date.parse(new Date()) + 1000 * 60;
             setTimer('.timer', inputDate);
-            // alert('Таймер запущен на 1 минуту.');
+            setTimeout(alert('Таймер запущен на 1 минуту.'), 1000);
         } else {
-            console.log(inputDay.value);  
-            console.log(inputDate);  
-            console.log(sum);  
             setTimer('.timer', inputDate);
-        }        
+        }
     })
+
+    let stopTimer =  function() {//stop button
+
+    }
+
+    let GetSumInput = function () {
+        let d = inputDay.value * 24 * 60 * 60 * 1000;
+        let h = inputHours.value * 60 * 60 * 1000;
+        let m = inputMinutes.value * 60 * 1000;
+        let s = inputSeconds.value * 1000;
+        let sumInput = d + h + m + s;
+        return sumInput;
+    }
 
     function getTime(inputDate) {
         const t = inputDate - Date.parse(new Date()),
@@ -67,8 +77,12 @@ window.addEventListener('DOMContentLoaded', () => {
             seconds.innerHTML = getZero(t.seconds);
 
             if (t.total <= 0) {
+                console.log(t.total);
                 clearInterval(timeInterval);
-                alert('Время вышло!');
+                // alert('Время истекло');
+                soundFinish.play();
+                soundFinish.volume = 0.15;
+
             }
         }
     }
